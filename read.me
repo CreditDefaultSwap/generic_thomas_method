@@ -1,0 +1,11 @@
+Wed 18 Sep 11:48:58 CEST 2024
+The following is a generic implentation of a Euler-lagrange solver using the Thomas' method based on:
+G. Rotskoff et al, PRE  95, 012148 (2017)
+
+It employs two class objects 1) a 'node' and 2) a 'string'. The node represents the control variables to be changed, and must return values of the friction matrix and its derivatives i.e. is customized depending on the system. The string, on the other hand, represents the generic solver for a collection of nodes representing a control protocol (path) with fixed boundaries.  
+
+Implentation is tested against  analytical results known for a harmonic trap where trap speed and stiffness are taken as control parameters as done in
+P. Zulkowski et al, PLOS one, 8, e82754 (2013)
+
+The implementation may additionally include fixed segment length constraints.
+ 
